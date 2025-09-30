@@ -8,6 +8,9 @@ let library = [
     { id: "b6", title: "Effective Java", author: "Joshua Bloch", genre: "Programming", available: true },
     { id: "b7", title: "Clean Architecture", author: "Robert C. Martin", genre: "Software Engineering", available: false },
     { id: "b8", title: "The Clean Coder", author: "Robert C. Martin", genre: "Programming", available: true },
+    { id: "b9", title: "To Kill a MockingBird", author: "Harper Lee", genre: "Fiction/Classic Literature", available: true},
+    { id: "b10", title: "Pride and Prejudice", author: " Jane Austen", genre: "Romance/Classic Fiction", available: "true"}
+  
   
   ];
 
@@ -38,5 +41,20 @@ let library = [
   
     return mostFrequent;
   }
+
+function groupByAavailability(collection) {
+    const groups = {
+      available: [],
+      brorrowed: []
+    };
   
+    for (const book of collection) {
+      if (book.available) groups.available.push(book);
+      else groups.borrowed.push(book);
+    }
+  
+    return groups;
+  }
+  
+
  
