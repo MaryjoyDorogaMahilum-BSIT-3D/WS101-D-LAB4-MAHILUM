@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>TODO APPLICATION</h1>
+
+  <form id="itemForm">
+    <input type="hidden" id="itemId">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" placeholder="Enter age" required>
+
+    <button type="submit">Save</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="dataBody"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
